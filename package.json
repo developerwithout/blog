@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "Personal Blog Site",
+  "main": "server/index.js",
+  "scripts": {
+    "server:dev": "clear && nodemon ./server/index.js",
+    "test": "NODE_ENV=test mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developerwithout/blog.git"
+  },
+  "author": "Joshua A. Dix <jadix117@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/developerwithout/blog/issues"
+  },
+  "homepage": "https://github.com/developerwithout/blog#readme"
+}
