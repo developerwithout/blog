@@ -1,17 +1,26 @@
 {
-  "name": "server",
-  "version": "0.0.1",
-  "description": "Server to run Personal Blog website",
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0"
-  },
-  "scripts": {
-    "start:dev": "clear && nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Joshua A. Dix <jadix117@gmail.com>",
-  "license": "MIT"
+    "name": "server",
+    "version": "0.0.1",
+    "description": "Server to run Personal Blog website",
+    "main": "index.js",
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.2.1"
+    },
+    "scripts": {
+        "start:dev": "clear && nodemon index.js",
+        "test:ff": "mocha -b",
+        "test": "mocha"
+    },
+    "author": "Joshua A. Dix <jadix117@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "chai": "^4.3.7",
+        "mocha": "^10.2.0",
+        "sinon": "^15.1.0"
+    }
 }

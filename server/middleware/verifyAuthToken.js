@@ -1,10 +1,17 @@
 const jwt = require('jsonwebtoken');
 
 const isLoggedIn = (req, res, next) => {
+    const token = req.cookies.accessToken;
+    if (!token) {
+        return res.status(403).send("A token is required for authentication.");
+    }
+
     try {
-        next()
+        const decodedToken = jwt.verify(token, process.env.JWT_SECRET_KEY);
+        req.user = decodedToken;
+        next();
     } catch (error) {
-        next(error)
+        res.status(401).send("Unauthorized. Invalid Token")
     }
 }
 

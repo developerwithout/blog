@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Orders = require('../controllers/orders.controller');
+const Orders = require('./orders.controller');
 
 router.get('/', Orders.getAll);
 

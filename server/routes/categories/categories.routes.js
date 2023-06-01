@@ -1,10 +1,10 @@
 const Categories = require('./categories.controller');
-const { isLoggedIn, isAdmin } = require('../middleware/verifyAuthToken')
+const { isLoggedIn, isAdmin } = require('../../middleware/verifyAuthToken')
 
 const router = require('express').Router();
 
 // All Access Routes
-router.getAll('/', Categories.getAll);
+router.get('/', Categories.getAll);
 
 // Admin Routes
 router.use(isLoggedIn);
